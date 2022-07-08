@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animate-left {
+  animation: animeLeft 5s forwards;
+}
+
+.animate-right {
+  animation: animeRight 5s forwards;
+}
+
+@keyframes animeLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-120%);
+  }
+}
+
+@keyframes animeRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+.input-control {
+  @apply flex items-center relative;
+}
+
+.input-control input {
+  @apply bg-gray-50 shadow rounded-lg border-0 w-full focus:ring-0 px-12 placeholder:text-sm placeholder:text-gray-400 placeholder:focus:text-light h-12;
+}
+
+.input-control .right-element {
+  @apply absolute right-0 mr-3 text-gray-500 text-xl;
+}
+
+.input-control .left-element {
+  @apply absolute left-0 ml-3 text-gray-500 text-2xl;
+}
+
+.error-element {
+  @apply text-red-500 text-xs pl-3 mt-0.5;
+}
